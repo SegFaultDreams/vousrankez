@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Vous Rankez Vous ? · Blandine Pujols</title>
+  <meta name="description" content="Tous les articles pour comprendre le digital : SEO, réseaux sociaux, IA, communication et outils web. Expliqué simplement pour les entreprises du Nord." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Blandine Pujols" />
+  <link rel="canonical" href="https://vousrankezvous.fr/blog/" />
+  <meta property="og:title" content="Blog | Vous Rankez Vous ?" />
+  <meta property="og:description" content="Tous les articles pour comprendre le digital : SEO, réseaux sociaux, IA, communication et outils web." />
+  <meta property="og:url" content="https://vousrankezvous.fr/blog/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Vous Rankez Vous ?",
+    "url": "https://vousrankezvous.fr/blog/",
+    "description": "Articles pédagogiques sur le digital pour les dirigeants de PME et TPE",
+    "publisher": { "@id": "https://vousrankezvous.fr/#person" },
+    "inLanguage": "fr-FR"
+  }
+  </script>
+</head>
+<body>
+<a href="#contenu-principal" class="skip-link">Aller au contenu</a>
+<nav aria-label="Navigation principale">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Vous rankez <span>vous</span> ?</a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="../ia-prompts-coding/index.html">IA &amp; Prompting</a></li>
+        <li><a href="../communication/index.html">Communication</a></li>
+        <li><a href="../marketing/index.html">Marketing</a></li>
+        <li><a href="../reseaux/index.html">Réseaux</a></li>
+        <li><a href="../glossaire/index.html">Glossaire</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Me contacter</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="contenu-principal">
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <span>Blog</span>
+      </nav>
+      <h1>Les décryptages du digital</h1>
+      <p>Du concret, pas du jargon. Tous les articles pour comprendre et agir sur votre présence en ligne.</p>
+    </div>
+  </div>
+
+  <section class="section" aria-label="Liste des articles">
+    <div class="container">
+      <!-- Filtres -->
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px">
+        <button onclick="filterArticles('all')" class="btn btn-primary" id="filter-all" style="padding:8px 18px; font-size:13px">Tous</button>
+        <button onclick="filterArticles('communication')" class="btn btn-outline" id="filter-communication" style="padding:8px 18px; font-size:13px">Communication</button>
+        <button onclick="filterArticles('marketing')" class="btn btn-outline" id="filter-marketing" style="padding:8px 18px; font-size:13px">Marketing</button>
+        <button onclick="filterArticles('reseaux')" class="btn btn-outline" id="filter-reseaux" style="padding:8px 18px; font-size:13px">Réseaux</button>
+        <button onclick="filterArticles('ia')" class="btn btn-outline" id="filter-ia" style="padding:8px 18px; font-size:13px">IA &amp; Prompting</button>
+        <button onclick="filterArticles('outils')" class="btn btn-outline" id="filter-outils" style="padding:8px 18px; font-size:13px">Outils &amp; Tech</button>
+      </div>
+
+      <div class="articles-grid" id="articles-list">
+        <!-- Communication -->
+        <a href="les-metiers-de-la-communication.html" class="article-card" data-cat="communication">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(96% 0.03 252),oklch(90% 0.06 252))">💬</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--blue-light);color:var(--blue)">Communication</span>
+              <span class="reading-time">5 min</span>
+            </div>
+            <h3>Les métiers de la communication : qui fait quoi ?</h3>
+            <p>Chargé de com, community manager, graphiste, rédacteur web : découvrez les rôles de chaque expert.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="charge-de-communication-vs-community-manager.html" class="article-card" data-cat="communication">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(94% 0.04 252),oklch(88% 0.07 252))">🗣️</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--blue-light);color:var(--blue)">Communication</span>
+              <span class="reading-time">4 min</span>
+            </div>
+            <h3>Chargé de com vs Community Manager : quelle différence ?</h3>
+            <p>Deux métiers souvent confondus mais aux missions très distinctes. On vous explique clairement.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="charte-graphique-pourquoi-essentielle.html" class="article-card" data-cat="communication">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(95% 0.05 280),oklch(89% 0.08 280))">🎨</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--blue-light);color:var(--blue)">Communication</span>
+              <span class="reading-time">5 min</span>
+            </div>
+            <h3>La charte graphique : pourquoi c'est indispensable pour votre marque ?</h3>
+            <p>Couleurs, typo, logo : comment construire une identité visuelle cohérente qui inspire confiance.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+
+        <!-- Marketing -->
+        <a href="seo-pour-les-debutants.html" class="article-card" data-cat="marketing">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(97% 0.04 160),oklch(92% 0.07 160))">📊</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:oklch(96% 0.04 160);color:oklch(38% 0.12 160)">Marketing</span>
+              <span class="reading-time">7 min</span>
+            </div>
+            <h3>SEO pour les débutants : comment être visible sur Google ?</h3>
+            <p>3 actions concrètes pour améliorer votre référencement naturel dès aujourd'hui.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="lexique-marketing-digital.html" class="article-card" data-cat="marketing">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(96% 0.05 160),oklch(90% 0.08 160))">📚</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:oklch(96% 0.04 160);color:oklch(38% 0.12 160)">Marketing</span>
+              <span class="reading-time">6 min</span>
+            </div>
+            <h3>ROI, KPI, CPC : le lexique du marketing digital décrypté</h3>
+            <p>Les sigles qui font peur expliqués simplement avec des exemples concrets pour votre entreprise.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="google-ads-vs-seo.html" class="article-card" data-cat="marketing">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(95% 0.06 160),oklch(89% 0.09 160))">💡</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:oklch(96% 0.04 160);color:oklch(38% 0.12 160)">Marketing</span>
+              <span class="reading-time">5 min</span>
+            </div>
+            <h3>Google Ads vs SEO : que choisir pour votre PME ?</h3>
+            <p>Payant ou gratuit ? Lequel des deux est le plus adapté à votre situation et votre budget.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+
+        <!-- Réseaux sociaux -->
+        <a href="quel-reseau-social-pour-votre-business.html" class="article-card" data-cat="reseaux">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(97% 0.03 44),oklch(93% 0.06 44))">📲</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--orange-light);color:var(--orange)">Réseaux sociaux</span>
+              <span class="reading-time">6 min</span>
+            </div>
+            <h3>Instagram, Facebook, LinkedIn : quel réseau pour votre business ?</h3>
+            <p>Guide pratique pour choisir les bons réseaux sociaux selon votre secteur et vos objectifs.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="algorithme-reseaux-sociaux-explique.html" class="article-card" data-cat="reseaux">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(96% 0.04 44),oklch(91% 0.07 44))">⚙️</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--orange-light);color:var(--orange)">Réseaux sociaux</span>
+              <span class="reading-time">5 min</span>
+            </div>
+            <h3>L'algorithme des réseaux sociaux expliqué simplement</h3>
+            <p>Comprendre pourquoi certains posts sont vus par des milliers de personnes et d'autres par personne.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="calendrier-editorial-reseaux-sociaux.html" class="article-card" data-cat="reseaux">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(95% 0.05 44),oklch(90% 0.08 44))">📅</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--orange-light);color:var(--orange)">Réseaux sociaux</span>
+              <span class="reading-time">7 min</span>
+            </div>
+            <h3>Comment créer un calendrier éditorial pour vos réseaux sociaux</h3>
+            <p>La méthode pas à pas pour planifier vos publications et ne plus jamais manquer d'idées.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+
+        <!-- IA & Prompting -->
+        <a href="intelligence-artificielle-chef-entreprise.html" class="article-card" data-cat="ia">
+          <div class="article-img" style="background:linear-gradient(135deg,var(--orange-light),oklch(93% 0.06 44))">🤖</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--orange-light);color:var(--orange)">IA &amp; Prompting</span>
+              <span class="reading-time">6 min</span>
+            </div>
+            <h3>Intelligence artificielle : ce qu'un chef d'entreprise doit comprendre</h3>
+            <p>Tour d'horizon des usages concrets de l'IA pour votre entreprise, sans termes complexes.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="chatgpt-pour-votre-entreprise.html" class="article-card" data-cat="ia">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(96% 0.04 44),oklch(90% 0.07 44))">💬</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--orange-light);color:var(--orange)">IA &amp; Prompting</span>
+              <span class="reading-time">8 min</span>
+            </div>
+            <h3>ChatGPT pour votre entreprise : 5 usages concrets</h3>
+            <p>Des exemples pratiques pour utiliser l'IA au quotidien dans votre activité professionnelle.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="prompt-engineering-explique.html" class="article-card" data-cat="ia">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(94% 0.05 44),oklch(88% 0.08 44))">✍️</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:var(--orange-light);color:var(--orange)">IA &amp; Prompting</span>
+              <span class="reading-time">5 min</span>
+            </div>
+            <h3>Le prompt engineering expliqué sans jargon</h3>
+            <p>Comment formuler vos instructions à l'IA pour obtenir exactement ce que vous voulez.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+
+        <!-- Outils & Tech -->
+        <a href="cms-wordpress-wix-comment-choisir.html" class="article-card" data-cat="outils">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(96% 0.03 280),oklch(90% 0.06 280))">🛠️</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:oklch(96% 0.03 280);color:oklch(38% 0.15 280)">Outils &amp; Tech</span>
+              <span class="reading-time">6 min</span>
+            </div>
+            <h3>CMS, WordPress, Wix : comment choisir votre outil de création de site ?</h3>
+            <p>Comparatif des principales solutions pour créer un site web selon vos besoins et votre budget.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="responsive-design-site-mobile.html" class="article-card" data-cat="outils">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(95% 0.04 280),oklch(89% 0.07 280))">📱</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:oklch(96% 0.03 280);color:oklch(38% 0.15 280)">Outils &amp; Tech</span>
+              <span class="reading-time">4 min</span>
+            </div>
+            <h3>Responsive design : pourquoi votre site doit être adapté au mobile</h3>
+            <p>60 % des visites viennent du mobile. Un site non adapté, c'est des clients perdus chaque jour.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+        <a href="analytics-lire-statistiques-site.html" class="article-card" data-cat="outils">
+          <div class="article-img" style="background:linear-gradient(135deg,oklch(94% 0.05 280),oklch(88% 0.08 280))">📈</div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag" style="background:oklch(96% 0.03 280);color:oklch(38% 0.15 280)">Outils &amp; Tech</span>
+              <span class="reading-time">6 min</span>
+            </div>
+            <h3>Analytics : comment lire les statistiques de votre site</h3>
+            <p>Les métriques essentielles à surveiller dans Google Analytics 4 et ce qu'elles révèlent sur vos visiteurs.</p>
+            <span class="article-read">Lire cet article</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="footer-logo">Vous rankez <span>vous</span> ?</a>
+        <p>Le jargon du digital expliqué simplement.<br />Par Blandine Pujols, freelance en création web et communication digitale dans les Hauts-de-France.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="../index.html#services">Création de site</a></li>
+          <li><a href="../index.html#services">Application</a></li>
+          <li><a href="../index.html#services">Réseaux sociaux</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Rubriques</h5>
+        <ul>
+          <li><a href="../communication/index.html">Communication</a></li>
+          <li><a href="../marketing/index.html">Marketing digital</a></li>
+          <li><a href="../ia-prompts-coding/index.html">IA et Prompting</a></li>
+          <li><a href="../glossaire/index.html">Glossaire</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Liens</h5>
+        <ul>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Blandine Pujols · vousrankezvous.fr · Aniche, Hauts-de-France</p>
+      <p>Fait avec passion et sans blabla inutile.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+function filterArticles(cat) {
+  const all = document.querySelectorAll('.article-card');
+  all.forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'flex' : 'none';
+  });
+  document.querySelectorAll('[id^="filter-"]').forEach(btn => {
+    btn.className = 'btn btn-outline';
+    btn.style.cssText = 'padding:8px 18px;font-size:13px';
+  });
+  const active = document.getElementById('filter-' + cat);
+  if (active) { active.className = 'btn btn-primary'; active.style.cssText = 'padding:8px 18px;font-size:13px'; }
+}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nina P.Bels — Blandine PUJOLS</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Nunito:wght@300;400;600&display=swap');
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --ink: #1c1c1e;
+      --ink-soft: #5a5a6e;
+      --rose: #c2185b;
+      --book-blue: #1565c0;
+      --border: #e0e0e8;
+      --shadow: rgba(0, 0, 0, 0.08);
+      --shadow-hover: rgba(0, 0, 0, 0.16);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      font-family: 'Nunito', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 44px 20px 72px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 390px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* ─── Animations ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatPhoto {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-5px); }
+    }
+
+    .anim { opacity: 0; animation: fadeUp 0.65s ease forwards; }
+    .anim:nth-child(1) { animation-delay: 0.05s; }
+    .anim:nth-child(2) { animation-delay: 0.18s; }
+    .anim:nth-child(3) { animation-delay: 0.30s; }
+    .anim:nth-child(4) { animation-delay: 0.42s; }
+    .anim:nth-child(5) { animation-delay: 0.52s; }
+    .anim:nth-child(6) { animation-delay: 0.62s; }
+    .anim:nth-child(7) { animation-delay: 0.72s; }
+
+    /* ─── Profile photo ─── */
+    .profile-wrap {
+      margin-bottom: 22px;
+    }
+
+    .profile-ring {
+      width: 136px;
+      height: 136px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, #e8c8d8 0%, #c9a0c0 50%, #e8c8d8 100%);
+      box-shadow: 0 6px 24px var(--shadow);
+      animation: floatPhoto 5s ease-in-out infinite 1s;
+    }
+
+    .profile-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      background: #f5f0f5;
+    }
+
+    /* ─── Name block ─── */
+    .name-block {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .author-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+      line-height: 1.15;
+    }
+
+    .pseudo {
+      margin-top: 7px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ─── Ornament divider ─── */
+    .ornament {
+      margin: 4px 0 18px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #c9a0c0;
+    }
+
+    .ornament-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #c9a0c0);
+    }
+
+    .ornament-line.right {
+      background: linear-gradient(to left, transparent, #c9a0c0);
+    }
+
+    /* ─── Welcome text ─── */
+    .welcome-text {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--rose);
+      text-align: center;
+      padding: 0 8px;
+      margin-bottom: 22px;
+    }
+
+    /* ─── TikTok icon ─── */
+    .tiktok-wrap {
+      margin-bottom: 24px;
+    }
+
+    .tiktok-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #ffffff;
+      text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .tiktok-link:hover {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
+
+    /* ─── Book cards ─── */
+    .books {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .book-card {
+      width: 100%;
+      display: flex;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      height: 96px;
+      box-shadow: 0 2px 12px var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .book-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px var(--shadow-hover);
+    }
+
+    .book-cover {
+      width: 40%;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .book-card:hover .book-cover img {
+      transform: scale(1.06);
+    }
+
+    .book-info {
+      flex: 1;
+      background: linear-gradient(135deg, var(--book-blue) 0%, #1976d2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-info::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.12) 50%, transparent 60%);
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+
+    .book-card:hover .book-info::after {
+      transform: translateX(100%);
+    }
+
+    .book-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      letter-spacing: 0.04em;
+      line-height: 1.4;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── Website buttons ─── */
+    .website-links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .website-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      padding: 14px 22px;
+      text-decoration: none;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1.5px solid var(--border);
+      color: var(--ink);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      box-shadow: 0 1px 6px var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    }
+
+    .website-btn:hover {
+      border-color: var(--ink);
+      background: #f8f8fb;
+      box-shadow: 0 4px 16px var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .website-btn svg {
+      color: var(--ink-soft);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 360px) {
+      .author-name { font-size: 1.8rem; }
+      .book-title   { font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Profile photo -->
+    <div class="profile-wrap anim">
+      <div class="profile-ring">
+        <img src="signature.png" alt="Blandine PUJOLS, auteure">
+      </div>
+    </div>
+
+    <!-- Name & Pseudo -->
+    <div class="name-block anim">
+      <h1 class="author-name">Blandine<br>PUJOLS</h1>
+      <p class="pseudo">[&nbsp;Pseudo&nbsp;:&nbsp;Nina P.Bels&nbsp;]</p>
+    </div>
+
+    <!-- Ornamental divider -->
+    <div class="ornament anim">
+      <span class="ornament-line"></span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2 L13.8 8.4 L20.4 8.4 L15 12.6 L16.8 19 L12 15.2 L7.2 19 L9 12.6 L3.6 8.4 L10.2 8.4 Z"/>
+      </svg>
+      <span class="ornament-line right"></span>
+    </div>
+
+    <!-- Welcome text -->
+    <p class="welcome-text anim">
+      Bonjour et bienvenue dans l'univers d'Hyperdream (science&#8209;fiction) et dans l'ambiance gothique de Spookorium.<br><br>
+      Vendredi 1er mai 2026 et samedi 2 mai 2026, téléchargez mes livres au format ebook gratuitement sur Amazon et Kindle&nbsp;!!
+    </p>
+
+    <!-- TikTok -->
+    <div class="tiktok-wrap anim">
+      <a href="#" class="tiktok-link" aria-label="TikTok" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.56a8.18 8.18 0 0 0 4.78 1.52V6.63a4.85 4.85 0 0 1-1.01.06z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Book cards -->
+    <div class="books anim">
+      <a
+        href="https://www.amazon.fr/HYPERDREAM-PATIENT-34-cauchemar-devenait-ebook/dp/B0GJMKP2G8/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=15CISH59JVA4N&dib=eyJ2IjoiMSJ9.sqtpWyWi02K_LqaC1Ri_7o8R_QwrZ6RSLIWtylDPFjmknclgTiJFE2rXhpQVcEMRWdC3X7We3zeypNm755y0pBtuhFaH6OsodXR217RAwCglV-ITw9reSYmzF4e6IvbFDIfZVuyYtMjvJK8xF_v65aV5dmdl9BQoeh0hY80tXU_nwmiZaw1ZY1hATwkL87KVaKWLLOg8U7bUfQTgZjNJBNbbS9tcgKd33rN8xSdyPEWhK1smmTX7TLBxgFzcgiUpsr93BYO-i-Mr2VCW4M0yEpPLdhPErQEcaUQua1qe4pY.NkLk-zQ3JNalTDGBnTaQLnBTKAqzcCB6C3Jz_bQvaKY&dib_tag=se&keywords=hyperdream&qid=1777624844&sprefix=hyperdream%2Caps%2C292&sr=8-1"
+        class="book-card"
+        target="_blank"
+        rel="noopener"
+        aria-label="Acheter Hyperdream : Patient 34 sur Amazon"
+      >
+        <div class="book-cover">
+          <img src="Couverture Hyperdream patient34.jpg" alt="Couverture Hyperdream Patient 34">
+        </div>
+        <div class="book-info">
+          <span class="book-title">Hyperdream<br>Patient 34</span>
+        </div>
+      </a>
+
+      <a
+        href="https://www.amazon.fr/SPOOKORIUM-S%C3%A9pulcres-Nina-P-Bels-ebook/dp/B0F9LKJLWY?ref_=ast_author_dp&th=1&psc=1"
+        class="book-card"
+        target="_blank"
+        rel="noopener"
+        aria-label="Acheter Spookorium : Le Cabinet des Sépulcres sur Amazon"
+      >
+        <div class="book-cover">
+          <img src="Spookorium_couverture_cds.jpg" alt="Couverture Spookorium Le Cabinet des Sépulcres">
+        </div>
+        <div class="book-info">
+          <span class="book-title">Spookorium<br>Le Cabinet<br>des Sépulcres</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Website links -->
+    <div class="website-links anim">
+      <a href="http://hyperdream.fr" class="website-btn" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        hyperdream.fr
+      </a>
+      <a href="http://spookorium.com" class="website-btn" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        spookorium.com
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
+

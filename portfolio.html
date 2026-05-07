@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Réalisations de Blandine Pujols | Communication &amp; Web</title>
+  <meta name="description" content="Portfolio de Blandine Pujols : sites web, visuels, vidéos et campagnes de communication réalisés pour des PME et associations dans les Hauts-de-France." />
+  <meta name="robots" content="index, follow" /><meta name="author" content="Blandine Pujols" />
+  <link rel="canonical" href="https://vousrankezvous.fr/portfolio/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .portfolio-filters { display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px; }
+    .filter-btn { padding:8px 20px;border:2px solid oklch(88% 0.04 252);border-radius:100px;font-family:inherit;font-size:0.9rem;font-weight:600;cursor:pointer;background:#fff;color:var(--gray);transition:all 0.2s; }
+    .filter-btn:hover,.filter-btn.active { background:var(--blue);border-color:var(--blue);color:#fff; }
+    .portfolio-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:28px; }
+    @media(max-width:900px){.portfolio-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:600px){.portfolio-grid{grid-template-columns:1fr;}}
+    .portfolio-card { border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#fff;transition:transform 0.2s,box-shadow 0.2s; }
+    .portfolio-card:hover { transform:translateY(-4px);box-shadow:0 12px 40px oklch(16% 0.05 252 / 0.14); }
+    .portfolio-card[data-cat].hidden { display:none; }
+    .portfolio-thumb { width:100%;aspect-ratio:4/3;object-fit:cover;display:block; }
+    .portfolio-video { width:100%;aspect-ratio:16/9;display:block;background:#000; }
+    .portfolio-thumb-placeholder { width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,oklch(94% 0.04 252),oklch(90% 0.06 280));display:flex;align-items:center;justify-content:center;color:oklch(60% 0.08 252);font-size:2.5rem; }
+    .portfolio-card-body { padding:20px; }
+    .portfolio-card-body .tag { font-size:0.78rem;padding:4px 10px; }
+    .portfolio-card-body h3 { font-size:1rem;margin:10px 0 6px;line-height:1.4; }
+    .portfolio-card-body p { font-size:0.88rem;color:var(--gray);line-height:1.6;margin:0; }
+    .tag-site { background:oklch(96% 0.03 280);color:oklch(38% 0.15 280); }
+    .tag-visuel { background:oklch(96% 0.04 80);color:oklch(38% 0.12 80); }
+    .tag-video { background:oklch(96% 0.03 330);color:oklch(38% 0.15 330); }
+    .card-link { text-decoration:none;display:block; }
+    .video-wrapper { position:relative;aspect-ratio:16/9;background:#111;overflow:hidden; }
+    .video-wrapper video { width:100%;height:100%;object-fit:cover;display:block; }
+    .video-play-btn { position:absolute;inset:0;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s; }
+    .video-play-btn::after { content:'▶';font-size:2rem;color:#fff;background:rgba(0,0,0,0.55);border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;padding-left:4px;transition:background 0.2s; }
+    .video-play-btn:hover::after { background:var(--orange); }
+  </style>
+</head>
+<body>
+<a href="#contenu-principal" class="skip-link">Aller au contenu</a>
+<nav aria-label="Navigation principale"><div class="container"><div class="nav-inner">
+  <a href="index.html" class="nav-logo">Vous rankez <span>vous</span> ?</a>
+  <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="ia-prompts-coding/index.html">IA &amp; Prompting</a></li>
+    <li><a href="communication/index.html">Communication</a></li>
+    <li><a href="marketing/index.html">Marketing</a></li>
+    <li><a href="reseaux/index.html">Réseaux</a></li>
+    <li><a href="glossaire/index.html">Glossaire</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Me contacter</a></li>
+  </ul>
+</div></div></nav>
+
+<main id="contenu-principal">
+  <div class="page-hero"><div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> <span>›</span> <span>Portfolio</span></nav>
+    <h1>Mes réalisations</h1>
+    <p>Sites web, visuels, vidéos et supports de communication — un aperçu de mes projets dans les Hauts-de-France.</p>
+  </div></div>
+
+  <div class="container" style="padding-top:52px;padding-bottom:80px;">
+
+    <!-- Filtres -->
+    <div class="portfolio-filters" role="list" aria-label="Filtrer par catégorie">
+      <button class="filter-btn active" data-filter="all" role="listitem">Tout voir</button>
+      <button class="filter-btn" data-filter="site" role="listitem">Sites web</button>
+      <button class="filter-btn" data-filter="visuel" role="listitem">Visuels</button>
+      <button class="filter-btn" data-filter="video" role="listitem">Vidéos</button>
+    </div>
+
+    <!-- Grille portfolio -->
+    <div class="portfolio-grid" id="portfolio-grid">
+
+      <!-- ===== SITES WEB ===== -->
+
+      <div class="portfolio-card" data-cat="site">
+        <a href="https://vousrankezvous.fr" target="_blank" rel="noopener" class="card-link" aria-label="Voir le site Vous Rankez Vous">
+          <img src="public/images/screen_vousrankez.png" alt="Vous Rankez Vous ?" class="portfolio-thumb" loading="lazy" />
+        </a>
+        <div class="portfolio-card-body">
+          <span class="tag tag-site">Site vitrine &amp; blog</span>
+          <h3>Vous Rankez Vous ?</h3>
+          <p>Conception et développement complet en HTML/CSS/JS sur-mesure. Stratégie, design, rédaction, SEO local.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="site">
+        <a href="https://spookorium.com" target="_blank" rel="noopener" class="card-link" aria-label="Voir le site Spookorium">
+          <img src="public/images/screen_spookorium.png" alt="Spookorium" class="portfolio-thumb" loading="lazy" />
+        </a>
+        <div class="portfolio-card-body">
+          <span class="tag tag-site">Site web</span>
+          <h3>Spookorium.com</h3>
+          <p>Création et gestion du site. Identité visuelle, contenus, référencement naturel.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="site">
+        <a href="https://hyperdream.fr" target="_blank" rel="noopener" class="card-link" aria-label="Voir le site Hyperdream">
+          <img src="public/images/screen_hyperdream.png" alt="Hyperdream" class="portfolio-thumb" loading="lazy" />
+        </a>
+        <div class="portfolio-card-body">
+          <span class="tag tag-site">Site web</span>
+          <h3>Hyperdream.fr</h3>
+          <p>Conception, développement et déploiement. Gestion des contenus et du SEO.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="site">
+        <a href="http://lumiru-ep.com/" target="_blank" rel="noopener" class="card-link" aria-label="Voir le site Lumiru">
+          <img src="public/images/screen_lumiru.png" alt="Lumiru EP" class="portfolio-thumb" loading="lazy" />
+        </a>
+        <div class="portfolio-card-body">
+          <span class="tag tag-site">Site vitrine</span>
+          <h3>Lumiru-ep.com</h3>
+          <p>Site vitrine pour Lumiru, spécialiste de l'aménagement urbain et de l'éclairage public.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="site">
+        <a href="https://entrepriselengronne.fr" target="_blank" rel="noopener" class="card-link" aria-label="Voir le site Entreprise Lengronne">
+          <img src="public/images/screen_lengronne.png" alt="Entreprise Lengronne" class="portfolio-thumb" loading="lazy" />
+        </a>
+        <div class="portfolio-card-body">
+          <span class="tag tag-site">Vente en ligne</span>
+          <h3>Entrepriselengronne.fr</h3>
+          <p>Site de vente et commande en ligne : pellets, bois de chauffage, fioul, gasoil, GNR.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="site">
+        <a href="https://desloovere.com" target="_blank" rel="noopener" class="card-link" aria-label="Voir le site Desloovere">
+          <img src="public/images/screen_desloovere.jpg" alt="Desloovere" class="portfolio-thumb" loading="lazy" />
+        </a>
+        <div class="portfolio-card-body">
+          <span class="tag tag-site">Vente en ligne</span>
+          <h3>Desloovere.com</h3>
+          <p>Site de vente et commande en ligne : pellets, bois de chauffage, fioul, gasoil, GNR.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="site">
+        <div class="portfolio-thumb-placeholder" aria-hidden="true" style="background:linear-gradient(135deg,oklch(96% 0.04 60),oklch(92% 0.06 40));">🧁</div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-site">Site vitrine</span>
+          <h3>Pâtisserie Cucci</h3>
+          <p>Site vitrine pour une boulangerie-pâtisserie : présentation, carte, contact.</p>
+        </div>
+      </div>
+
+      <!-- ===== VISUELS ===== -->
+
+      <div class="portfolio-card" data-cat="visuel">
+        <img src="public/images/4par3_MDC.png" alt="4x3 Maison du Chauffage" class="portfolio-thumb" loading="lazy" />
+        <div class="portfolio-card-body">
+          <span class="tag tag-visuel">Affichage 4×3</span>
+          <h3>4×3 — La Maison du Chauffage</h3>
+          <p>Création d'un visuel grand format pour campagne d'affichage publicitaire.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="visuel">
+        <img src="public/images/4par3_pellets.png" alt="4x3 prix été pellets" class="portfolio-thumb" loading="lazy" />
+        <div class="portfolio-card-body">
+          <span class="tag tag-visuel">Affichage 4×3</span>
+          <h3>4×3 — Prix d'été pellets</h3>
+          <p>Visuel promotionnel grand format pour les prix d'été sur le pellet.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="visuel">
+        <img src="public/images/visuel_lengronne_affiche.png" alt="4x3 Lengronne" class="portfolio-thumb" loading="lazy" />
+        <div class="portfolio-card-body">
+          <span class="tag tag-visuel">Affichage 4×3</span>
+          <h3>4×3 — Lengronne</h3>
+          <p>Visuel grand format pour la société Lengronne.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="visuel">
+        <img src="public/images/calendrier.png" alt="Calendrier 2026" class="portfolio-thumb" loading="lazy" />
+        <div class="portfolio-card-body">
+          <span class="tag tag-visuel">Print</span>
+          <h3>Calendrier 2026</h3>
+          <p>Conception et mise en page du calendrier annuel 2026.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="visuel">
+        <img src="public/images/bientot_ete.png" alt="Visuel Facebook été clim" class="portfolio-thumb" loading="lazy" />
+        <div class="portfolio-card-body">
+          <span class="tag tag-visuel">Réseaux sociaux</span>
+          <h3>Visuel Facebook — Installation clim</h3>
+          <p>Visuel saisonnier pour mettre en avant l'installation de climatisation.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="visuel">
+        <img src="public/images/facebook_banner.png" alt="Bannière Facebook La Maison du Chauffage" class="portfolio-thumb" loading="lazy" />
+        <div class="portfolio-card-body">
+          <span class="tag tag-visuel">Réseaux sociaux</span>
+          <h3>Bannière Facebook — La Maison du Chauffage</h3>
+          <p>Création de la photo de couverture Facebook.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="visuel">
+        <img src="public/images/visuel_mascotte_lengronne_tourdefrance.png" alt="Mascotte Lengronne Tour de France" class="portfolio-thumb" loading="lazy" />
+        <div class="portfolio-card-body">
+          <span class="tag tag-visuel">Réseaux sociaux &amp; presse</span>
+          <h3>Mascotte Lengronne — Tour de France</h3>
+          <p>Visuel pour les réseaux sociaux et Télé Avantages.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="visuel">
+        <img src="public/images/xbanner_scuderia.png" alt="X-banner Scuderia 296" class="portfolio-thumb" loading="lazy" />
+        <div class="portfolio-card-body">
+          <span class="tag tag-visuel">PLV / X-Banner</span>
+          <h3>X-Banner — Scuderia 296</h3>
+          <p>Création d'un x-banner (kakémono) pour Scuderia 296.</p>
+        </div>
+      </div>
+
+      <!-- ===== VIDÉOS ===== -->
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/a fond la clim.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Vidéo écran extérieur · IA</span>
+          <h3>À fond la clim — La Maison du Chauffage</h3>
+          <p>Vidéo pour l'écran extérieur, réalisée avec l'IA.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/il va faire frais.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Pub d'été</span>
+          <h3>Il va faire frais — La Maison du Chauffage</h3>
+          <p>Publicité d'été pour La Maison du Chauffage.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/mascotte_mdc.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Création mascotte</span>
+          <h3>Mascotte — La Maison du Chauffage</h3>
+          <p>Création de la mascotte et vidéo de présentation.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/mettez la clim.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Reel Facebook</span>
+          <h3>Mettez la clim — La Maison du Chauffage</h3>
+          <p>Reel Facebook pour La Maison du Chauffage.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/pub_cine_lengronne.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Pub cinéma</span>
+          <h3>Pub cinéma — Prix d'été pellets Lengronne</h3>
+          <p>Publicité pour le cinéma annonçant les prix d'été sur le pellet.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/reel_biofioul.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Reel réseaux · IA (Sora 2)</span>
+          <h3>Le biofioul — Reel explicatif</h3>
+          <p>Reel réalisé avec Sora 2 pour expliquer ce qu'est le biofioul.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/video pour mdc.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Vidéo · IA</span>
+          <h3>Vidéo — La Maison du Chauffage</h3>
+          <p>Vidéo promotionnelle réalisée avec l'IA.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/video-salle de bain.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Vidéo</span>
+          <h3>Salle de bain — La Maison du Chauffage</h3>
+          <p>Vidéo illustrant l'activité salle de bain de La Maison du Chauffage.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="video">
+        <div class="video-wrapper">
+          <video class="portfolio-video" preload="none" controls>
+            <source src="public/images/video-rentree.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="tag tag-video">Vidéo · IA</span>
+          <h3>La rentrée — La Maison du Chauffage</h3>
+          <p>Vidéo réalisée avec l'IA pour la rentrée.</p>
+        </div>
+      </div>
+
+    </div><!-- /portfolio-grid -->
+
+    <!-- CTA -->
+    <div style="margin-top:56px;text-align:center;padding:48px;background:var(--bg);border-radius:var(--radius);">
+      <h2 style="font-size:1.6rem;margin-bottom:12px;">Un projet en tête ?</h2>
+      <p style="color:var(--gray);margin-bottom:28px;">Que ce soit un site, une campagne ou une stratégie de communication complète, parlons-en.</p>
+      <a href="index.html#contact" class="btn-primary">Me contacter</a>
+    </div>
+  </div>
+</main>
+
+<footer><div class="container">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="index.html" class="footer-logo">Vous rankez <span>vous</span> ?</a><p>Par Blandine Pujols, freelance dans les Hauts-de-France.</p></div>
+    <div class="footer-col"><h5>Rubriques</h5><ul><li><a href="marketing/index.html">Marketing digital</a></li><li><a href="glossaire/index.html">Glossaire</a></li></ul></div>
+    <div class="footer-col"><h5>Liens</h5><ul><li><a href="a-propos.html">À propos</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="index.html#services">Création de site</a></li><li><a href="portfolio.html">Portfolio</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Blandine Pujols · vousrankezvous.fr</p><p>Fait avec passion et sans blabla inutile.</p></div>
+</div></footer>
+<script src="js/main.js"></script>
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.portfolio-card[data-cat]');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => {
+        c.classList.toggle('hidden', f !== 'all' && c.dataset.cat !== f);
+      });
+    });
+  });
+</script>
+</body>
+</html>

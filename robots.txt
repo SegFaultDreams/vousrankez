@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /mentions-legales
+Disallow: /politique-confidentialite
+
+Sitemap: https://vousrankezvous.fr/sitemap.xml

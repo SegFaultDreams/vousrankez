@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Pages principales -->
+  <url><loc>https://vousrankezvous.fr/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vousrankezvous.fr/a-propos/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vousrankezvous.fr/portfolio/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vousrankezvous.fr/contact/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Rubriques -->
+  <url><loc>https://vousrankezvous.fr/ia-prompts-coding/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vousrankezvous.fr/communication/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vousrankezvous.fr/marketing/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vousrankezvous.fr/reseaux/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vousrankezvous.fr/outils-tech/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog index -->
+  <url><loc>https://vousrankezvous.fr/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Articles de blog -->
+  <url><loc>https://vousrankezvous.fr/blog/seo-pour-les-debutants/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/les-metiers-de-la-communication/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/intelligence-artificielle-chef-entreprise/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/chatgpt-pour-votre-entreprise/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/quel-reseau-social-pour-votre-business/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/cms-wordpress-wix-comment-choisir/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/lexique-marketing-digital/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/google-ads-vs-seo/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/algorithme-reseaux-sociaux-explique/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/calendrier-editorial-reseaux-sociaux/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/prompt-engineering-explique/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/responsive-design-site-mobile/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/analytics-lire-statistiques-site/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/charge-de-communication-vs-community-manager/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vousrankezvous.fr/blog/charte-graphique-pourquoi-essentielle/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Glossaire index -->
+  <url><loc>https://vousrankezvous.fr/glossaire/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Termes du glossaire -->
+  <url><loc>https://vousrankezvous.fr/glossaire/seo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/roi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/cta/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/kpi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/ux-design/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/ia-generative/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/sea/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/cms/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/responsive-design/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/reach/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/engagement/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/algorithme/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/conversion/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/landing-page/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/inbound-marketing/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/content-marketing/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/e-reputation/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/backlink/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/meta-description/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/analytics/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/persona/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/tunnel-de-vente/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/ab-testing/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/prompt/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/community-management/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vousrankezvous.fr/glossaire/vibe-coding/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>

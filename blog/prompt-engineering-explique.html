@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le prompt engineering expliqué sans jargon | Vous Rankez Vous ?</title>
+  <meta name="description" content="Comment formuler vos instructions à l'IA pour obtenir exactement ce que vous voulez. Techniques de prompt engineering expliquées simplement avec des exemples concrets." />
+  <meta name="robots" content="index, follow" /><meta name="author" content="Blandine Pujols" />
+  <link rel="canonical" href="https://vousrankezvous.fr/blog/prompt-engineering-explique/" />
+  <meta property="og:title" content="Le prompt engineering expliqué sans jargon" /><meta property="og:type" content="article" /><meta property="og:locale" content="fr_FR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<a href="#contenu-principal" class="skip-link">Aller au contenu</a>
+<nav aria-label="Navigation principale"><div class="container"><div class="nav-inner">
+  <a href="../index.html" class="nav-logo">Vous rankez <span>vous</span> ?</a>
+  <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="../ia-prompts-coding/index.html" class="active">IA &amp; Prompting</a></li>
+    <li><a href="../communication/index.html">Communication</a></li>
+    <li><a href="../marketing/index.html">Marketing</a></li>
+    <li><a href="../reseaux/index.html">Réseaux</a></li>
+    <li><a href="../glossaire/index.html">Glossaire</a></li>
+    <li><a href="../index.html#contact" class="nav-cta">Me contacter</a></li>
+  </ul>
+</div></div></nav>
+<main id="contenu-principal">
+  <div class="page-hero"><div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span>›</span> <a href="index.html">Blog</a> <span>›</span> <span>Prompt engineering</span></nav>
+    <div style="margin-bottom:12px"><span class="tag" style="background:var(--orange-light);color:var(--orange)">IA &amp; Prompting</span><span style="font-size:13px;color:var(--gray);margin-left:10px">5 min · 25 mars 2026</span></div>
+    <h1>Le prompt engineering expliqué sans jargon</h1>
+    <p>Un bon prompt fait toute la différence entre une réponse IA générique et inutilisable, et un résultat précis prêt à l'emploi. Voici les techniques essentielles.</p>
+  </div></div>
+  <div class="container"><div class="article-layout">
+    <article class="article-content">
+      <h2 id="cest-quoi">C'est quoi le prompt engineering ?</h2>
+      <p>Le <strong>prompt</strong> est l'instruction que vous donnez à un outil d'IA (ChatGPT, Claude, Gemini...). Le <strong>prompt engineering</strong> est l'art de formuler ces instructions pour obtenir le meilleur résultat possible.</p>
+      <p>C'est un peu comme parler à un assistant très compétent mais qui prend tout au pied de la lettre. Plus votre instruction est précise et contextualisée, meilleur sera le résultat.</p>
+
+      <h2 id="les-4-elements">Les 4 éléments d'un bon prompt</h2>
+      <ul>
+        <li><strong>Le rôle :</strong> donnez un rôle à l'IA. "Tu es un expert en marketing digital spécialisé dans les PME françaises..."</li>
+        <li><strong>Le contexte :</strong> expliquez votre situation. "...Je dirige une boulangerie artisanale à Cambrai, spécialisée dans le pain au levain..."</li>
+        <li><strong>La tâche :</strong> soyez précis sur ce que vous voulez. "...Rédige une description de mon service de livraison à domicile..."</li>
+        <li><strong>Le format :</strong> précisez la forme du résultat. "...en 150 mots maximum, ton chaleureux et local, avec 3 arguments clés en bullet points."</li>
+      </ul>
+      <blockquote>Garbage in, garbage out. Si votre prompt est vague, la réponse sera vague. Investissez 2 minutes de plus dans votre instruction pour économiser 10 minutes de corrections.</blockquote>
+
+      <h2 id="techniques">Techniques avancées (mais simples)</h2>
+      <h3>La technique "Act as" (jouer un rôle)</h3>
+      <p>"Agis comme un juriste spécialisé en droit des contrats et explique-moi en termes simples les points importants à vérifier dans ce contrat de prestation : [coller le contrat]"</p>
+
+      <h3>La technique "Step by step" (étape par étape)</h3>
+      <p>Demandez à l'IA de réfléchir étape par étape quand le problème est complexe. "Raisonne étape par étape pour me donner une stratégie de lancement sur Instagram pour mon salon de coiffure à Valenciennes."</p>
+
+      <h3>La technique des exemples</h3>
+      <p>Montrez ce que vous voulez : "Voici un exemple de post qui a bien fonctionné pour moi : [exemple]. Crée 5 posts dans le même style mais sur le thème [nouveau thème]."</p>
+
+      <h3>Le prompt itératif</h3>
+      <p>Ne cherchez pas le prompt parfait du premier coup. Commencez, regardez le résultat, puis affinez. "C'est bien mais je voudrais quelque chose de plus direct et avec moins de formules de politesse."</p>
+
+      <h2 id="erreurs-courantes">Les erreurs courantes à éviter</h2>
+      <ul>
+        <li><strong>Être trop vague :</strong> "Fais-moi un post" ne donne rien d'exploitable</li>
+        <li><strong>Ne pas donner de contexte :</strong> l'IA ne connaît pas votre entreprise, dites-lui</li>
+        <li><strong>Accepter le premier résultat :</strong> l'itération est normale, affinez toujours</li>
+        <li><strong>Ne pas vérifier les faits :</strong> l'IA peut inventer des informations plausibles mais fausses</li>
+        <li><strong>Partager des données confidentielles :</strong> évitez de donner vos données clients ou financières</li>
+      </ul>
+
+      <div style="background:var(--blue-light);border-radius:var(--radius);padding:28px;margin-top:40px">
+        <p style="font-weight:700;color:var(--blue);margin-bottom:8px">Vous voulez apprendre à utiliser l'IA pour votre entreprise ?</p>
+        <p style="margin-bottom:16px;color:var(--dark)">J'organise des formations pratiques sur l'IA et le prompt engineering pour les dirigeants et équipes dans les Hauts-de-France.</p>
+        <a href="../index.html#contact" class="btn btn-primary">Me contacter</a>
+      </div>
+    </article>
+    <aside class="article-sidebar">
+      <div class="sidebar-card"><h4>Dans cet article</h4><ul class="toc-list">
+        <li><a href="#cest-quoi">C'est quoi le prompt engineering ?</a></li>
+        <li><a href="#les-4-elements">Les 4 éléments d'un bon prompt</a></li>
+        <li><a href="#techniques">Techniques avancées</a></li>
+        <li><a href="#erreurs-courantes">Erreurs courantes</a></li>
+      </ul></div>
+      <div class="sidebar-card"><h4>Termes liés</h4><ul>
+        <li><a href="../glossaire/prompt.html">Prompt</a></li>
+        <li><a href="../glossaire/ia-generative.html">IA générative</a></li>
+        <li><a href="../glossaire/vibe-coding.html">Vibe Coding</a></li>
+      </ul></div>
+      <div class="sidebar-card"><h4>Articles similaires</h4><ul>
+        <li><a href="chatgpt-pour-votre-entreprise.html">ChatGPT : 5 usages concrets</a></li>
+        <li><a href="intelligence-artificielle-chef-entreprise.html">IA pour les dirigeants</a></li>
+      </ul></div>
+    </aside>
+  </div></div>
+</main>
+<footer><div class="container">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="../index.html" class="footer-logo">Vous rankez <span>vous</span> ?</a><p>Par Blandine Pujols, freelance dans les Hauts-de-France.</p></div>
+    <div class="footer-col"><h5>Rubriques</h5><ul><li><a href="../ia-prompts-coding/index.html">IA et Prompting</a></li><li><a href="../marketing/index.html">Marketing digital</a></li><li><a href="../glossaire/index.html">Glossaire</a></li></ul></div>
+    <div class="footer-col"><h5>Liens</h5><ul><li><a href="../a-propos.html">À propos</a></li><li><a href="../index.html#contact">Contact</a></li><li><a href="../mentions-legales.html">Mentions légales</a></li></ul></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="../index.html#services">Création de site</a></li><li><a href="../portfolio.html">Portfolio</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Blandine Pujols · vousrankezvous.fr</p><p>Fait avec passion et sans blabla inutile.</p></div>
+</div></footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
+
